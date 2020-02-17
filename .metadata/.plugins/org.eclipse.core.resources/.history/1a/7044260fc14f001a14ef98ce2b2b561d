@@ -1,0 +1,40 @@
+package initial_code01;
+
+//You may use import as below.
+import java.util.*;
+
+class Solution {
+	public long solution(long num) {
+		// Write code here.
+		long answer = 0;
+
+		answer = num + 1;
+
+		String text = answer + "";
+		System.out.println(":: " + text);
+
+		String aText = "";
+
+		for (int i = 0; i < text.length(); i++) {
+			if (text.charAt(i) == 0) {
+				aText += 1 + "";
+			} else {
+				aText += text.charAt(i) + "";
+			}
+		}
+		
+		System.out.println(aText);
+
+		return answer;
+	}
+
+	// The following is main method to output testcase.
+	public static void main(String[] args) {
+		Solution sol = new Solution();
+		long num = 9949999;
+		long ret = sol.solution(num);
+
+		// Press Run button to receive output.
+		System.out.println("Solution: return value of the method is " + ret + " .");
+	}
+}
